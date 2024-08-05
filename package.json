@@ -1,0 +1,8 @@
+{
+  "name": "nexfuroma-ui",
+  "private": true,
+  "scripts": {
+    "hello": "echo 'Hello, World!'"
+  },
+  "devDependencies": {}
+}
