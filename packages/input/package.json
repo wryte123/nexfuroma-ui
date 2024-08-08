@@ -18,16 +18,16 @@
     "url": "https://github.com/wryte123/nexfuroma-ui/issues"
   },
   "scripts": {
-    "build": "echo build",
+    "build": "vite build",
     "test": "echo test"
   },
-  "main": "",
-  "module": "",
+  "main": "./dist/nexfuromaui-input.umd.js",
+  "module": "./dist/nexfuromaui-input.mjs",
   "types": "",
   "exports": {
     ".": {
-      "require": "",
-      "module": "",
+      "require": "./dist/nexfuromaui-input.umd.js",
+      "module": "./dist/nexfuromaui-input.mjs",
       "types": ""
     }
   },
@@ -38,6 +38,8 @@
   "peerDependencies": {
     "vue": ">=3.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@nexfuromaui/shared": "workspace:^"
+  },
   "devDependencies": {}
 }
