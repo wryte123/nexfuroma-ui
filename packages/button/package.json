@@ -1,0 +1,43 @@
+{
+	"name": "@nexfuromaui/button",
+	"version": "0.0.1",
+	"description": "",
+	"keywords": [
+		"vue",
+		"ui",
+		"component library"
+	],
+	"author": "wryte123",
+	"license": "MIT",
+	"homepage": "https://github.com/wryte123/nexfuroma-ui/blob/main/README.md",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/wryte123/nexfuroma-ui.git"
+	},
+	"bugs": {
+		"url": "https://github.com/wryte123/nexfuroma-ui/issues"
+	},
+	"scripts": {
+		"build": "echo build",
+		"test": "echo test"
+	},
+	"main": "",
+	"module": "",
+	"types": "",
+	"exports": {
+		".": {
+			"require": "",
+			"module": "",
+			"types": ""
+		}
+	},
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"peerDependencies": {
+		"vue": ">=3.0.0"
+	},
+	"dependencies": {},
+	"devDependencies": {}
+}

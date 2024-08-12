@@ -1,0 +1,9 @@
+{
+	"name": "@nexfuromaui/docs",
+	"private": true,
+	"scripts": {
+		"dev": "echo dev"
+	},
+	"dependencies": {},
+	"devDependencies": {}
+}
