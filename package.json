@@ -2,14 +2,16 @@
   "name": "nexfuromaui",
   "private": true,
   "scripts": {
-    "hello": "echo hello"
+    "build:ui": "pnpm --filter ./packages/** run build"
   },
   "dependencies": {
     "nexfuromaui": "file:",
     "vue": "^3.4.37"
   },
   "devDependencies": {
+    "@types/node": "^22.3.0",
     "@vitejs/plugin-vue": "^5.1.2",
+    "rimraf": "^6.0.1",
     "sass": "^1.77.8",
     "typescript": "^5.5.4",
     "vite": "^5.4.0"

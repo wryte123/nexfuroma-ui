@@ -1,0 +1,12 @@
+{
+  "name": "@nexfuromaui/demo",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev"
+  },
+  "dependencies": {
+    "@nexfuromaui/ui": "workspace:^"
+  },
+  "devDependencies": {
+  }
+}

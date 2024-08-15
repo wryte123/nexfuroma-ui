@@ -18,16 +18,16 @@
 		"url": "https://github.com/wryte123/nexfuroma-ui/issues"
 	},
 	"scripts": {
-		"build": "echo build",
+		"build": "vite build",
 		"test": "echo test"
 	},
-	"main": "",
-	"module": "",
+	"main": "./dist/furomaui-shared.umd.js",
+	"module": "./dist/furomaui-shared.umd.js",
 	"types": "",
 	"exports": {
 		".": {
-			"require": "",
-			"module": "",
+			"require": "./dist/furomaui-shared.umd.js",
+			"module": "./dist/furomaui-shared.umd.js",
 			"types": ""
 		}
 	},
@@ -38,6 +38,8 @@
 	"peerDependencies": {
 		"vue": ">=3.0.0"
 	},
-	"dependencies": {},
-	"devDependencies": {}
+	"dependencies": {
+		"@types/lodash": "^4.17.7",
+		"lodash": "^4.17.21"
+	}
 }

@@ -1,5 +1,5 @@
 {
-	"name": "@nexfuromaui/button",
+	"name": "@nexfuromaui/ui",
 	"version": "0.0.1",
 	"description": "",
 	"keywords": [
@@ -21,13 +21,13 @@
 		"build": "vite build",
 		"test": "echo test"
 	},
-	"main": "./dist/furomaui-button.umd.js",
-	"module": "./dist/furomaui-button.umd.js",
+	"main": "./dist/furomaui-shared.umd.js",
+	"module": "./dist/furomaui-shared.umd.js",
 	"types": "",
 	"exports": {
 		".": {
-			"require": "./dist/furomaui-button.umd.js",
-			"module": "./dist/furomaui-button.umd.js",
+			"require": "./dist/furomaui-ui.umd.js",
+			"module": "./dist/furomaui-ui.umd.js",
 			"types": ""
 		}
 	},
@@ -39,6 +39,8 @@
 		"vue": ">=3.0.0"
 	},
 	"dependencies": {
-		"@nexfuromaui/shared": "workspace:^"
+		"@nexfuromaui/shared": "workspace:^",
+		"@nexfuromaui/button": "workspace:^",
+		"@nexfuromaui/input": "workspace:^"
 	}
 }
