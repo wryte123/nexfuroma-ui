@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": ".",
+    "outDir": "dist",
+    "target": "ESNext",
+    "module": "ESNext",
+    //模块解析
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "removeComments": false,
+    //严格模式，类型检查
+    "strict": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "lib": [],
+    "types": [],
+    "paths": {
+      "@nexfuromaui/*": ["packages/*/src"]
+    }
+  }
+}
