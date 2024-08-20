@@ -23,12 +23,12 @@
 	},
 	"main": "./dist/furomaui-input.umd.js",
 	"module": "./dist/furomaui-input.umd.js",
-	"types": "",
+	"types": "./dist/index.d.ts",
 	"exports": { 
 		".": {
 			"require": "./dist/furomaui-input.umd.js",
 			"module": "./dist/furomaui-input.umd.js",
-			"types": ""
+			"types": "./dist/index.d.ts"
 		}
 	},
 	"files": [

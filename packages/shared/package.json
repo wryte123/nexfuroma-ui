@@ -23,12 +23,12 @@
 	},
 	"main": "./dist/furomaui-shared.umd.js",
 	"module": "./dist/furomaui-shared.umd.js",
-	"types": "",
+	"types": "./dist/index.d.ts",
 	"exports": {
 		".": {
 			"require": "./dist/furomaui-shared.umd.js",
 			"module": "./dist/furomaui-shared.umd.js",
-			"types": ""
+			"types": "./dist/index.d.ts"
 		}
 	},
 	"files": [

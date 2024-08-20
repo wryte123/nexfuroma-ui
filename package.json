@@ -2,7 +2,11 @@
   "name": "nexfuromaui",
   "private": true,
   "scripts": {
-    "build:ui": "pnpm --filter './packages/**' run build"
+    "clean:type": "rimraf ./dist",
+    "type:node": "tsc -p tsconfig.node.json --noEmit --composite false",
+    "type:src": "pnpm run clean:type && vue-tsc -p tsconfig.src.json --composite false --declaration --emitDeclarationOnly",
+    "mv-type": "tsx ./scripts/dts-mv.ts",
+    "build:ui": "pnpm run type:src && pnpm --filter './packages/**' run build && pnpm run mv-type"
   },
   "dependencies": {
     "nexfuromaui": "file:",
@@ -13,7 +17,9 @@
     "@vitejs/plugin-vue": "^5.1.2",
     "rimraf": "^6.0.1",
     "sass": "^1.77.8",
+    "tsx": "^4.17.0",
     "typescript": "^5.5.4",
-    "vite": "^5.4.0"
+    "vite": "^5.4.0",
+    "vue-tsc": "^2.0.29"
   }
 }
