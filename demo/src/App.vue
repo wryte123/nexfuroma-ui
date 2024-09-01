@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button, Input } from "@nexfuromaui/ui";
+import { Button, Input } from '@nexfuromaui/ui';
 </script>
 
 <template>

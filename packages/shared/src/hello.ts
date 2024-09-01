@@ -1,5 +1,5 @@
 // packages/shared/src/hello.ts
-export function hello(to: string = "World") {
+export function hello(to: string = 'World') {
   const txt = `Hello ${to}!`;
   alert(txt);
   return txt;
