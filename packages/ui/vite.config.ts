@@ -1,17 +1,4 @@
 import { defineConfig } from 'vite';
+import { generateVueConfig } from '../build/build.config';
 
-export default defineConfig({
-  build: {
-    lib: {
-      entry: './src/index.ts',
-      name: 'Nexfuromaui',
-      fileName: 'furomaui-ui',
-    },
-    minify: false,
-    rollupOptions: {
-      external: [/@nexfuromaui.*/, 'vue'],
-
-      output: {},
-    },
-  },
-});
+export default defineConfig(({ mode }) => generateVueConfig({ mode: mode as any }));

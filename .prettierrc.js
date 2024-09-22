@@ -16,7 +16,7 @@ module.exports = {
   // 标签闭合不换行
   bracketSameLine: true,
   // 箭头函数尽量简写
-  arrowParens: 'avoid',
+  // arrowParens: 'avoid',
   // 行位换行符
   endOfLine: 'lf',
 };

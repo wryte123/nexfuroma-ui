@@ -46,6 +46,10 @@ module.exports = defineConfig({
     'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',
 
+    // 允许先调用后定义
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['off'],
+
     // vue 允许单单词组件名
     'vue/multi-word-component-names': 'off',
 
@@ -66,9 +70,11 @@ module.exports = defineConfig({
   overrides: [
     // 对于 vite 和 vitest 的配置文件，不对 console.log 进行错误提示
     {
-      files: ['**/vite.config.*', '**/vitest.config.*'],
+      files: ['**/vite.config.*', '**/vitest.config.*', 'scripts/**'],
       rules: {
         'no-console': 'off',
+        'no-use-before-define': 'off',
+        'import/no-relative-packages': 'off',
       },
     },
   ],

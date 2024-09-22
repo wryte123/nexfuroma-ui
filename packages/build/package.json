@@ -1,6 +1,6 @@
 {
-  "name": "@nexfuromaui/input",
-  "version": "0.0.1",
+  "name": "@nexfuromaui/build",
+  "version": "0.0.0",
   "description": "",
   "keywords": [
     "vue",
@@ -8,7 +8,6 @@
     "component library"
   ],
   "author": "wryte123",
-  "license": "MIT",
   "homepage": "https://github.com/wryte123/nexfuroma-ui/blob/main/README.md",
   "repository": {
     "type": "git",
@@ -21,13 +20,13 @@
     "build": "vite build",
     "test": "echo test"
   },
-  "main": "./dist/nexfuromaui-input.umd.js",
-  "module": "./dist/nexfuromaui-input.mjs",
+  "main": "./dist/nexfuromaui-build.umd.js",
+  "module": "./dist/nexfuromaui-build.mjs",
   "types": "./dist/src/indexd.ts",
   "exports": {
     ".": {
-      "require": "./dist/nexfuromaui-input.umd.js",
-      "import": "./dist/nexfuromaui-input.mjs",
+      "require": "./dist/nexfuromaui-build.umd.js",
+      "import": "./dist/nexfuromaui-build.mjs",
       "types": "./dist/src/indexd.ts"
     }
   },
@@ -36,10 +35,20 @@
     "README.md"
   ],
   "peerDependencies": {
+    "vite": ">=3.0.0",
     "vue": ">=3.0.0"
   },
-  "dependencies": {
-    "@nexfuromaui/shared": "workspace:^"
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    }
   },
-  "devDependencies": {}
+  "dependencies": {
+    "@rollup/plugin-replace": "^5.0.7",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "type-fest": "^4.26.0",
+    "typescript": "^5.5.0",
+    "vite-plugin-inspect": "^0.8.7"
+  }
 }
