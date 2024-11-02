@@ -23,13 +23,14 @@
   },
   "main": "./dist/nexfuromaui-input.umd.js",
   "module": "./dist/nexfuromaui-input.mjs",
-  "types": "./dist/src/indexd.ts",
+  "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/nexfuromaui-input.umd.js",
       "import": "./dist/nexfuromaui-input.mjs",
-      "types": "./dist/src/indexd.ts"
-    }
+      "types": "./dist/src/index.d.ts"
+    },
+    "./*": "./*"
   },
   "files": [
     "dist",

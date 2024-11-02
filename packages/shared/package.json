@@ -1,6 +1,7 @@
 {
   "name": "@nexfuromaui/shared",
   "version": "0.0.1",
+  "type": "module",
   "description": "",
   "keywords": [
     "vue",
@@ -23,13 +24,14 @@
   },
   "main": "./dist/nexfuromaui-shared.umd.js",
   "module": "./dist/nexfuromaui-shared.mjs",
-  "types": "./dist/src/indexd.ts",
+  "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/nexfuromaui-shared.umd.js",
       "import": "./dist/nexfuromaui-shared.mjs",
-      "types": "./dist/src/indexd.ts"
-    }
+      "types": "./dist/src/index.d.ts"
+    },
+    "./*": "./*"
   },
   "files": [
     "dist",

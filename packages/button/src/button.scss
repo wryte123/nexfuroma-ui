@@ -1,7 +1,90 @@
-.test-class {
-  transition:
-    color 0.15s ease-in-out,
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+/* stylelint-disable selector-class-pattern */
+$button-types: primary, success, danger, warning, info;
+
+@mixin button-type-styles() {
+  @each $type in $button-types {
+    &.nx-button--#{$type} {
+      --nx-button-color: rgb(var(--nx-color-reverse));
+      --nx-button-bg-color: rgb(var(--nx-color-#{$type}));
+      --nx-button-border-color: rgb(var(--nx-color-#{$type}));
+      --nx-button-hover-color: rgb(var(--nx-color-reverse));
+      --nx-button-hover-bg-color: rgb(var(--op-color-#{$type}-light-3));
+      --nx-button-hover-border-color: rgb(var(--nx-color-#{$type}-light-3));
+      --nx-button-active-color: rgb(var(--nx-color-reverse));
+      --nx-button-active-bg-color: rgb(var(--nx-color-#{$type}-dark-2));
+      --nx-button-active-border-color: rgb(var(--nx-color-#{$type}-dark-2));
+      --nx-button-disabled-color: rgb(var(--nx-color-reverse));
+      --nx-button-disabled-bg-color: rgb(var(--nx-color-#{$type}-light-5));
+      --nx-button-disabled-border-color: rgb(var(--nx-color-#{$type}-light-5));
+    }
+  }
+}
+
+@mixin button-plain-styles() {
+  @each $type in $button-types {
+    &.nx-button--#{$type} {
+      --nx-button-color: rgb(var(--nx-color-#{$type}));
+      --nx-button-bg-color: rgb(var(--nx-color-#{$type}-light-9));
+      --nx-button-border-color: rgb(var(--nx-color-#{$type}-light-5));
+      --nx-button-hover-color: rgb(var(--nx-color-reverse));
+      --nx-button-hover-bg-color: rgb(var(--nx-color-#{$type}));
+      --nx-button-hover-border-color: rgb(var(--nx-color-#{$type}));
+      --nx-button-disabled-color: rgb(var(--nx-color-#{$type}-light-5));
+      --nx-button-disabled-bg-color: rgb(var(--nx-color-#{$type}-light-9));
+      --nx-button-disabled-border-color: rgb(var(--nx-color-#{$type}-light-8));
+    }
+  }
+}
+
+.nx-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--nx-button-padding-y) var(--nx-button-padding-x);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: var(--nx-button-color);
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--nx-button-bg-color);
+  border-color: var(--nx-button-border-color);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  outline: none;
+
+  &:hover {
+    color: var(--nx-button-hover-color);
+    background-color: var(--nx-button-hover-bg-color);
+    border-color: var(--nx-button-hover-border-color);
+  }
+
+  &:active {
+    color: var(--nx-button-active-color);
+    background-color: var(--nx-button-active-border-color);
+    border-color: var(--nx-button-active-border-color);
+  }
+
+  @include button-type-styles;
+
+  &.nx-button--plain {
+    --nx-button-hover-color: rgb(var(--nx-color-primary));
+    --nx-button-hover-bg-color: rgb(var(--nx-color-card));
+    --nx-button-hover-border-color: rgb(var(--nx-color-primary));
+
+    @include button-plain-styles;
+  }
+
+  &.nx-button--disabled,
+  &.nx-button--disabled:hover,
+  &.nx-button--disabled:active {
+    color: var(--nx-button-disabled-color);
+    cursor: pointer;
+    background-color: var(--nx-button-disabled-bg-color);
+    border-color: var(--nx-button-disabled-border-color);
+  }
 }

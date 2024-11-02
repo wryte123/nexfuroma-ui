@@ -14,10 +14,14 @@
     "vue": "^3.4.37"
   },
   "devDependencies": {
-    "@stylistic/stylelint-plugin": "^3.0.1",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@stylistic/stylelint-plugin": "^3.1.1",
     "@types/node": "^22.4.0",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
+    "@unocss/preset-legacy-compat": "^0.63.4",
+    "@unocss/transformer-directives": "^0.63.4",
     "@vitejs/plugin-vue": "^5.1.2",
     "eslint": "^8.45.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -25,6 +29,7 @@
     "eslint-define-config": "^2.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-vue": "^9.27.0",
+    "husky": "^9.1.6",
     "rimraf": "^6.0.1",
     "sass": "^1.77.8",
     "stylelint": "^16.9.0",
@@ -33,6 +38,7 @@
     "stylelint-config-standard-scss": "^13.1.0",
     "tsx": "^4.17.0",
     "typescript": "^5.5.0",
+    "unocss": "^0.63.4",
     "vite": "^5.4.0",
     "vue-eslint-parser": "^9.4.3",
     "vue-tsc": "^2.0.29"

@@ -1,10 +1,11 @@
 // demo/vite.config.ts
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import unocss from 'unocss/vite';
 import { join } from 'node:path';
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), unocss()],
   resolve: {
     alias: [
       {

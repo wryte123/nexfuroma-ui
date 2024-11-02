@@ -1,5 +1,5 @@
 {
-  "name": "@nexfuromaui/button",
+  "name": "@nexfuromaui/styles",
   "version": "0.0.1",
   "type": "module",
   "description": "",
@@ -19,17 +19,24 @@
     "url": "https://github.com/wryte123/nexfuroma-ui/issues"
   },
   "scripts": {
-    "build": "vite build",
+    "build:theme": "vite build --mode theme",
+    "build:unocss": "vite build --mode unocss",
+    "build": "pnpm run build:unocss && pnpm run build:theme",
     "test": "echo test"
   },
-  "main": "./dist/nexfuromaui-button.umd.js",
-  "module": "./dist/nexfuromaui-button.mjs",
+  "main": "./dist/nexfuromaui-styles.umd.js",
+  "module": "./dist/nexfuromaui-styles.mjs",
   "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/nexfuromaui-button.umd.js",
-      "import": "./dist/nexfuromaui-button.mjs",
+      "require": "./dist/nexfuromaui-styles.umd.js",
+      "import": "./dist/nexfuromaui-styles.mjs",
       "types": "./dist/src/index.d.ts"
+    },
+    "./preset": {
+      "require": "./dist/preset.umd.js",
+      "import": "./dist/preset.mjs",
+      "types": "./dist/src/unoPreset.d.ts"
     },
     "./*": "./*",
     "./style.css": "./dist/style.css"
@@ -39,9 +46,11 @@
     "README.md"
   ],
   "peerDependencies": {
-    "vue": ">=3.0.0"
+    "vue": ">=3.0.0",
+    "unocss": "=0.63.4"
   },
   "dependencies": {
     "@nexfuromaui/shared": "workspace:^"
-  }
+  },
+  "devDependencies": {}
 }

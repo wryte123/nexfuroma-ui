@@ -59,6 +59,8 @@ module.exports = defineConfig({
     // 允许使用 ++
     'no-plusplus': 'off',
 
+    'import/no-relative-packages': 'off',
+
     'no-spaced-func': 'off',
 
     // 换行符不作约束
@@ -74,7 +76,6 @@ module.exports = defineConfig({
       rules: {
         'no-console': 'off',
         'no-use-before-define': 'off',
-        'import/no-relative-packages': 'off',
       },
     },
   ],
