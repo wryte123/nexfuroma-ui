@@ -6,10 +6,10 @@ import { nexfuromauiPreset } from './packages/styles/src/unoPreset';
 export default defineConfig({
   presets: [
     presetUno(),
+    nexfuromauiPreset(),
     presetLegacyCompat({
       commaStyleColorFunction: true,
     }),
-    nexfuromauiPreset(),
   ],
   transformers: [transformerDirectives()],
 });

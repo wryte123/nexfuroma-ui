@@ -24,6 +24,6 @@ const classes = computed(() => {
 
 <template>
   <button class="nx-button" :class="classes">
-    <slot :type="type" />
+    <slot />
   </button>
 </template>

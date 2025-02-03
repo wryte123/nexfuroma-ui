@@ -20,7 +20,12 @@ module.exports = defineConfig({
   },
 
   // 集成 Airbnb 规则集以及 vue 相关规则
-  extends: ['airbnb-base', 'airbnb-typescript/base', 'plugin:vue/vue3-recommended'],
+  extends: [
+    'airbnb-base',
+    'airbnb-typescript/base',
+    'plugin:vue/vue3-recommended',
+    // 'plugin:@typescript-eslint/recommended',
+  ],
 
   // 指定 vue 解析器
   parser: 'vue-eslint-parser',

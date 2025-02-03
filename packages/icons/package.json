@@ -1,0 +1,46 @@
+{
+  "name": "@nexfuromaui/icons",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "",
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
+  "author": "wryte123",
+  "license": "MIT",
+  "homepage": "https://github.com/wryte123/nexfuroma-ui/blob/main/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wryte123/nexfuroma-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wryte123/nexfuroma-ui/issues"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "echo test"
+  },
+  "main": "./dist/nexfuromaui-icons.umd.js",
+  "module": "./dist/nexfuromaui-icons.mjs",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/nexfuromaui-icons.umd.js",
+      "import": "./dist/nexfuromaui-icons.mjs",
+      "types": "./dist/src/index.d.ts"
+    },
+    "./*": "./*",
+    "./icons.css": "./dist/icons.css",
+    "./icons.json": "./dist/icons.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "@iconify/tools": "^4.1.1",
+    "@iconify/utils": "^2.2.1"
+  }
+}

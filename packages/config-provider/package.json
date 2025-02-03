@@ -1,5 +1,5 @@
 {
-  "name": "@nexfuromaui/ui",
+  "name": "@nexfuromaui/config-provider",
   "version": "0.0.1",
   "type": "module",
   "description": "",
@@ -19,23 +19,20 @@
     "url": "https://github.com/wryte123/nexfuroma-ui/issues"
   },
   "scripts": {
-    "build:package": "vite build --mode package",
-    "build:full": "vite build --mode full",
-    "build:full-min": "vite build --mode full-min",
-    "build": "pnpm run build:package && pnpm run build:full && pnpm run build:full-min",
+    "build": "vite build",
     "test": "echo test"
   },
-  "main": "./dist/nexfuromaui-ui.umd.js",
-  "module": "./dist/nexfuromaui-ui.mjs",
+  "main": "./dist/nexfuromaui-config-provider.umd.js",
+  "module": "./dist/nexfuromaui-config-provider.mjs",
   "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/nexfuromaui-ui.umd.js",
-      "import": "./dist/nexfuromaui-ui.mjs",
+      "require": "./dist/nexfuromaui-config-provider.umd.js",
+      "import": "./dist/nexfuromaui-config-provider.mjs",
       "types": "./dist/src/index.d.ts"
     },
     "./*": "./*",
-    "./styles/*": "./dist/styles/*"
+    "./style.css": "./dist/style.css"
   },
   "files": [
     "dist",
@@ -45,10 +42,8 @@
     "vue": ">=3.0.0"
   },
   "dependencies": {
-    "@nexfuromaui/shared": "workspace:^",
-    "@nexfuromaui/button": "workspace:^",
-    "@nexfuromaui/input": "workspace:^",
     "@nexfuromaui/styles": "workspace:^",
-    "@nexfuromaui/config-provider": "workspace:^"
-  }
+    "@nexfuromaui/shared": "workspace:^"
+  },
+  "devDependencies": {}
 }

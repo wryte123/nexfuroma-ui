@@ -8,7 +8,7 @@ $button-types: primary, success, danger, warning, info;
       --nx-button-bg-color: rgb(var(--nx-color-#{$type}));
       --nx-button-border-color: rgb(var(--nx-color-#{$type}));
       --nx-button-hover-color: rgb(var(--nx-color-reverse));
-      --nx-button-hover-bg-color: rgb(var(--op-color-#{$type}-light-3));
+      --nx-button-hover-bg-color: rgb(var(--nx-color-#{$type}-light-3));
       --nx-button-hover-border-color: rgb(var(--nx-color-#{$type}-light-3));
       --nx-button-active-color: rgb(var(--nx-color-reverse));
       --nx-button-active-bg-color: rgb(var(--nx-color-#{$type}-dark-2));

@@ -70,10 +70,10 @@ function createRgbaColor(r: number, g: number, b: number, a: number = 1): RGBACo
     args: [r, g, b, a],
     get rgbTxt() {
       const [rr, gg, bb] = this.args;
-      return `rgb(${rr}, ${gg}, ${bb})`;
+      return `${rr}, ${gg}, ${bb}`;
     },
     get rgba() {
-      return `rgb(${this.rgbTxt}, ${this.args[3] || 1})`;
+      return `rgba(${this.rgbTxt}, ${this.args[3] || 1})`;
     },
   };
 }
