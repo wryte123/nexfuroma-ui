@@ -28,6 +28,7 @@ function hexToRgba(str: string): RGBAColor | null {
   const r = parseInt(colorStr.slice(0, 2), 16);
   const g = parseInt(colorStr.slice(2, 4), 16);
   const b = parseInt(colorStr.slice(4, 6), 16);
+
   return createRgbaColor(r, g, b, 1);
 }
 
@@ -45,7 +46,9 @@ function parseCssFunc(str: string): RGBAColor | null {
   if (!match) return null;
 
   const [, func, argsTxt] = match;
-  if (!cssColorFuncs.includes(func)) return null;
+  if (!cssColorFuncs.includes(func)) {
+    return null;
+  }
 
   let argsArr = argsTxt.split(',');
   if (argsArr.length === 1) {
@@ -110,8 +113,8 @@ export function generateRgbColorLevels(color: RGBAColor, levels: number = 9) {
 
   const percent = 100 / (levels + 1);
   for (let i = 1; i < levels + 1; i++) {
-    result.light.push(mixRgbColor(color, createRgbaColor(255, 255, 255), percent * i));
-    result.dark.push(mixRgbColor(color, createRgbaColor(0, 0, 0), percent * i));
+    result.light.push(mixRgbColor(color, createRgbaColor(255, 255, 255), i * percent));
+    result.dark.push(mixRgbColor(color, createRgbaColor(0, 0, 0), i * percent));
   }
   return result;
 }

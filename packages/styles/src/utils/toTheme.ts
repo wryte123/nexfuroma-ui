@@ -1,6 +1,4 @@
-import {
-  GenerateCssVarsOptions, DefaultPrefix, DEFAULT_PREFIX, getCssVar,
-} from './cssVars';
+import { GenerateCssVarsOptions, DefaultPrefix, DEFAULT_PREFIX, getCssVar } from './cssVars';
 
 /**
  * 主题生成选项
@@ -21,7 +19,7 @@ export function toTheme<
   T extends Record<string, any> = Record<string, any>,
   K extends keyof T = keyof T,
   P extends string = DefaultPrefix,
->(origin: T, options: ToThemeOptions<K, P>) {
+>(origin: T, options?: ToThemeOptions<K, P>) {
   const {
     type = 'color',
     prefix = DEFAULT_PREFIX,

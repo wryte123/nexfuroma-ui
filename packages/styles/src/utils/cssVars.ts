@@ -44,7 +44,7 @@ export type CssVarObject<
 /**
  * 生成 CSS 变量对象
  * @typeParam {@link CssVarObject}
- * @param origin 原始对象
+ * @param origin 原始主题变量对象
  * @param options 选项 {@link GenerateCssVarsOptions}
  */
 export function generateCssVars<

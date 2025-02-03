@@ -1,10 +1,11 @@
 /** 基础颜色主题变量 */
 export const themeColors = {
-  'color-primary': '#acc8e5',
+  'color-primary': '#c7000b',
   'color-success': '#50d4ab',
-  'color-warning': '#f2c037',
-  'color-danger': '#d72828',
+  'color-warning': '#fbb175',
+  'color-danger': '#f66f6a',
   'color-info': '#526ecc',
+  'color-transparent': 'transparent',
   'color-black': '#000',
   'color-white': '#fff',
 
@@ -31,6 +32,8 @@ export const themeColors = {
 
 /**
  * 需要生成色阶的颜色
+ *
+ * 例如 color-primary 将会生成 color-primary-light-[1-9] 以及 color-primary-dark-[1-9] 系列浅色与深色的变量。
  */
 export const themeColorLevelsEnabledKeys: (keyof typeof themeColors)[] = [
   'color-primary',
