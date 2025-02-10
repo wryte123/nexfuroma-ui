@@ -1,12 +1,6 @@
 import { resolve, join } from 'node:path';
 import { writeFile, mkdir } from 'node:fs/promises';
-import {
-  importDirectory,
-  cleanupSVG,
-  runSVGO,
-  parseColors,
-  isEmptyColor,
-} from '@iconify/tools';
+import { importDirectory, cleanupSVG, runSVGO, parseColors, isEmptyColor } from '@iconify/tools';
 import { getIconsCSS } from '@iconify/utils';
 
 /**

@@ -109,6 +109,10 @@ function switchSecondLineTheme() {
         切换第二行主题，当前：{{ currentSecondLineTheme }}
       </Button>
     </div>
+    <div>
+      <i class="i-nx-alert text-100px c-blue inline-block"></i>
+      <i class="i-nx-alert-marked text-60px c-red inline-block"></i>
+    </div>
     <Input />
   </div>
 </template>

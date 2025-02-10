@@ -1,4 +1,3 @@
-// packages/icons/vite.config.mts
 import { PluginOption } from 'vite';
 import { generateIconify } from './src';
 import { generateConfig } from '../build/scripts';
@@ -13,24 +12,20 @@ const ICONS_REL = 'icons';
 /** 生成的产物文件名称 */
 const FILE_NAME = 'icons';
 
-export default generateConfig({
-  outDir: OUT_REL,
-  // 在 package.json 的 exports 字段声明样式文件的人口
-  onSetPkg: (pkg, options) => {
-    const exports: Record<string, string> = {
-      [`./${FILE_NAME}.css`]: relCwd(absCwd(options.outDir, `${FILE_NAME}.css`), false),
-      [`./${FILE_NAME}.json`]: relCwd(absCwd(options.outDir, `${FILE_NAME}.json`), false),
-    };
-    Object.assign(
-      pkg.exports as Record<string, any>,
-      exports,
-    );
+export default generateConfig(
+  {
+    outDir: OUT_REL,
+    // 在 package.json 的 exports 字段声明样式文件的入口
+    onSetPkg: (pkg, options) => {
+      const exports: Record<string, string> = {
+        [`./${FILE_NAME}.css`]: relCwd(absCwd(options.outDir, `${FILE_NAME}.css`), false),
+        [`./${FILE_NAME}.json`]: relCwd(absCwd(options.outDir, `${FILE_NAME}.json`), false),
+      };
+      Object.assign(pkg.exports as Record<string, any>, exports);
+    },
   },
-}, {
-  plugins: [
-    pluginGenerateIconify(),
-  ],
-});
+  { plugins: [pluginGenerateIconify()] },
+);
 
 function pluginGenerateIconify(): PluginOption {
   return {
