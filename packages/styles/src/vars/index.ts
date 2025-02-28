@@ -1,3 +1,4 @@
+// packages/styles/src/vars/index.ts
 import { ThemeCssVarsConfig } from './theme';
 import { ButtonCssVarsConfig } from './button';
 

@@ -18,7 +18,7 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "skipLibCheck": true,
-    "lib": ["ESNext", "DOM"],
+    "lib": [],
     "types": [],
     "paths": {
       "@nexfuromaui/*": ["packages/*/src"]

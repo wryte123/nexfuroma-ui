@@ -1,3 +1,4 @@
+// docs/tsconfig.json
 {
   // 集成基础配置
   "extends": "../tsconfig.base.json",

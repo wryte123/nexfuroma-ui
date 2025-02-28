@@ -1,3 +1,4 @@
+// packages/styles/src/theme/index.ts
 import { inject, App, Plugin } from 'vue';
 import { isObjectLike } from '@nexfuromaui/shared';
 import { generateCssVars } from '../utils';
@@ -40,7 +41,7 @@ export function useTheme() {
 }
 
 export const Theme: Plugin<NexfuromauiCssVarsConfig[]> = {
-  install(app, ...options) {
+  install: (app, ...options) => {
     const finalOptions: NexfuromauiCssVarsConfig = {};
     options.forEach((item) => {
       Object.assign(finalOptions, item);

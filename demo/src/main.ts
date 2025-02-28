@@ -1,3 +1,4 @@
+// demo/src/main.ts
 import { createApp } from 'vue';
 import { Theme } from '@nexfuromaui/ui';
 import App from './App.vue';

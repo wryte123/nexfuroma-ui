@@ -1,9 +1,16 @@
 {
 	"name": "@nexfuromaui/docs",
+	"type": "module",
 	"private": true,
 	"scripts": {
-		"dev": "echo dev"
+		"dev": "vitepress dev . --host",
+		"build": "vitepress build .",
+		"preview": "vitepress preview . --host"
 	},
-	"dependencies": {},
-	"devDependencies": {}
+	"dependencies": {
+		"@nexfuromaui/ui": "workspace:^"
+	},
+	"devDependencies": {
+		"vitepress": "^1.6.3"
+	}
 }
