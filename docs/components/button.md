@@ -1,7 +1,3 @@
-<!-- docs/components/button.md -->
-<script setup>
-import demo1 from '../demo/button/demo1.vue'
-</script>
 
 # Button 按钮
 
@@ -11,15 +7,10 @@ import demo1 from '../demo/button/demo1.vue'
 
 基础的按钮用法。
 
-<Demo>
-  <template #demo>
-    <demo1></demo1>
-  </template>
-  <template #code>
+:::demo
 
-  <<< ../demo/button/demo1.vue
+../demo/button/demo1.vue
 
-  </template>
-</Demo>
+:::
 
 ## Button API

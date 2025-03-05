@@ -71,6 +71,10 @@ module.exports = defineConfig({
     // 换行符不作约束
     'linebreak-style': 'off',
     'vue/max-attributes-per-line': 'off',
+
+    'no-param-reassign': ['error', { props: false }],
+
+    'no-continue': 'off',
   },
 
   // 文件级别的重写

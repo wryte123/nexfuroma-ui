@@ -1,10 +1,17 @@
 // docs/.vitepress/config.mts
 import { defineConfig } from 'vitepress';
+import { mdPlugin } from './plugins';
 
 // 配置参考：https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'NexfuromaUI',
   description: 'A Vue 3组件库',
+  ignoreDeadLinks: true,
+  markdown: {
+    config: (md) => {
+      md.use(mdPlugin);
+    },
+  },
   themeConfig: {
     // 新增 themeConfig.nav 头部导航配置
     // 参考：https://vitepress.dev/reference/default-theme-nav#navigation-links
