@@ -1,6 +1,6 @@
 {
   "name": "@nexfuromaui/input",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
   "keywords": [
     "vue",
@@ -16,6 +16,10 @@
   },
   "bugs": {
     "url": "https://github.com/wryte123/nexfuroma-ui/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "scripts": {
     "build": "vite build",
@@ -40,7 +44,7 @@
     "vue": ">=3.0.0"
   },
   "dependencies": {
+    "@nexfuromaui/button": "workspace:^",
     "@nexfuromaui/shared": "workspace:^"
-  },
-  "devDependencies": {}
+  }
 }

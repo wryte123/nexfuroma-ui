@@ -7,7 +7,7 @@ hero:
   tagline: 从 0 到 1 搭建 Vue 组件库
   image:
     src: /logo.png
-    alt: OpenX
+    alt: Nexfuroma
   actions:
     - theme: brand
       text: 指南
@@ -17,11 +17,11 @@ hero:
       link: /components/
     - theme: brand
       text: API 文档
-      link: /api/
+      link: /api/README
     - theme: brand
       text: 演练场
       link: /playground
     - theme: alt
       text: Github
-      link: https://open.codehub.huawei.com/innersource/OpenxUI/openx-ui/files?ref=master
+      link: https://github.com/wryte123/nexfuroma-ui
 ---

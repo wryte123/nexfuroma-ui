@@ -108,22 +108,16 @@ function switchSecondLineTheme() {
         切换第二行主题，当前：{{ currentSecondLineTheme }}
       </Button>
     </div>
-    <div>
-      <i class="i-nx-alert text-100px c-blue inline-block" />
-      <i class="i-nx-alert-marked text-60px c-red inline-block" />
-    </div>
     <Input />
   </div>
 </template>
 
-<style scoped lang="scss">
-.btns {
-  :deep(.nx-button) {
-    margin-bottom: 10px;
+<style scoped>
+.deep(.nx-button:not(:first-child)){
+  margin-left: 10px;
+}
 
-    &:not(:first-child) {
-      margin-left: 10px;
-    }
-  }
+:deep(.nx-button){
+  margin-bottom: 10px;
 }
 </style>

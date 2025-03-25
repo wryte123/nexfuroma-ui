@@ -1,3 +1,4 @@
+/** @module ConfigProvider */
 import { Component } from 'vue';
 import { NexfuromauiCssVarsConfig } from '@nexfuromaui/styles';
 import { InferVueDefaults } from '@nexfuromaui/shared';

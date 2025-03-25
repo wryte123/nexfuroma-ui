@@ -20,7 +20,9 @@
     // demo 目录存放用例代码
     "demo/**/*",
     // 脚本目录，之后会涉及
-    "scripts/**/*"
+    "scripts/**/*",
+    "../typings/style.d.ts",
+    "../node_modules/**/*"
   ],
   "exclude": ["**/dist", "**/cache"]
 }

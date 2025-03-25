@@ -53,7 +53,7 @@ export function mdDemoPlugin(md: MarkdownIt) {
         );
 
         // 拼接 <Demo> 组件的使用代码
-        const txt = `<Demo>
+        const txt = `<Demo source="${encodeURIComponent(sourceCode)}">
           <template #demo><${componentName} /></template>
           <template #code>${sourceCodeHtml}</template>
         `;

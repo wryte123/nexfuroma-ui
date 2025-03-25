@@ -1,6 +1,6 @@
 {
   "name": "@nexfuromaui/shared",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "description": "",
   "keywords": [
@@ -17,6 +17,10 @@
   },
   "bugs": {
     "url": "https://github.com/wryte123/nexfuroma-ui/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "scripts": {
     "build": "vite build",
