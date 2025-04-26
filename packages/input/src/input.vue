@@ -98,7 +98,10 @@ defineExpose<InputExpose>({
         @blur="handleBlur"
       >
       <!-- 清除按钮 -->
-      <i v-if="clearable && localValue" class="i-nx-clean" @click="handleClear" />
+      <span
+        v-if="clearable && !disabled"
+        class="i-nx-clean nx-input__clear" @click="handleClear"
+      />
     </div>
   </div>
 </template>

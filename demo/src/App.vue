@@ -8,6 +8,7 @@ import {
   tinyThemeVars,
   themeVars,
   NexfuromauiCssVarsConfig,
+  hello,
 } from '@nexfuromaui/ui';
 
 const { setTheme } = useTheme();
@@ -39,6 +40,13 @@ function switchSecondLineTheme() {
 }
 
 const inputValue = ref('');
+
+// function keydownHandle(event: KeyboardEvent) {
+//   if (event.key === 'Enter') {
+//     const { value } = inputValue;
+//     hello(value);
+//   }
+// }
 </script>
 
 <template>
@@ -116,6 +124,7 @@ const inputValue = ref('');
       <i class="i-nx-alert-marked text-60px c-red inline-block" />
     </div>
     <Input
+      v-model="inputValue"
       placeholder="请输入内容"
       clearable
     />
