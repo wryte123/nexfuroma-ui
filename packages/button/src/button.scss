@@ -83,7 +83,7 @@ $button-types: primary, success, danger, warning, info;
   &.nx-button--disabled:hover,
   &.nx-button--disabled:active {
     color: var(--nx-button-disabled-color);
-    cursor: pointer;
+    cursor: not-allowed;
     background-color: var(--nx-button-disabled-bg-color);
     border-color: var(--nx-button-disabled-border-color);
   }

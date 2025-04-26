@@ -1,6 +1,7 @@
 {
   "name": "@nexfuromaui/input",
   "version": "0.0.3",
+  "type": "module",
   "description": "",
   "keywords": [
     "vue",
@@ -34,7 +35,8 @@
       "import": "./dist/nexfuromaui-input.mjs",
       "types": "./dist/src/index.d.ts"
     },
-    "./*": "./*"
+    "./*": "./*",
+    "./style.css": "./dist/style.css"
   },
   "files": [
     "dist",

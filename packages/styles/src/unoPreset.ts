@@ -1,11 +1,14 @@
 import { mergeConfigs, Preset, UserConfig } from 'unocss';
 import { Theme } from 'unocss/preset-mini';
-import { baseConfig, themeConfig, buttonConfig } from './unocss';
+import {
+  baseConfig, themeConfig, buttonConfig, inputConfig,
+} from './unocss';
 
 /** 组件名字和预设对象的关系表 */
 const configMaps = {
   theme: themeConfig,
   button: buttonConfig,
+  input: inputConfig,
 } satisfies Record<string, UserConfig<Theme>>;
 
 type ConfigKeys = keyof typeof configMaps;

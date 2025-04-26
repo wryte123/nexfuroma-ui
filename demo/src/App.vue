@@ -37,6 +37,8 @@ function switchSecondLineTheme() {
     Object.assign(secondLineThemeVars, tinyThemeVars);
   }
 }
+
+const inputValue = ref('');
 </script>
 
 <template>
@@ -110,10 +112,17 @@ function switchSecondLineTheme() {
       </Button>
     </div>
     <div>
-      <i class="i-nx-alert text-100px c-blue inline-block"></i>
-      <i class="i-nx-alert-marked text-60px c-red inline-block"></i>
+      <i class="i-nx-alert text-100px c-blue inline-block" />
+      <i class="i-nx-alert-marked text-60px c-red inline-block" />
     </div>
-    <Input />
+    <Input
+      placeholder="请输入内容"
+      clearable
+    />
+    <Input
+      placeholder="禁止输入内容"
+      disabled
+    />
   </div>
 </template>
 

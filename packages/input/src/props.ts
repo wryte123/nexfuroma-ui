@@ -2,24 +2,43 @@
 /** @module Input */
 import { Ref } from 'vue';
 import { InferVueDefaults } from '@nexfuromaui/shared';
-import { ButtonProps, defaultButtonProps } from '@nexfuromaui/button';
-import type Input from './input.vue';
 
 /** 输入框组件的属性 */
-export interface InputProps extends ButtonProps {
+export interface InputProps {
+
   /**
    * 输入值，支持 v-model 双向绑定
    * @default ''
    */
   modelValue?: string;
+
+  /**
+   * 输入框的占位符
+   * @default ''
+   */
+  placeholder?: string;
+
+  /**
+   * 是否禁用
+   * @default false
+   */
+  disabled?: boolean;
+
+  /**
+   * 是否显示清除按钮
+   * @default false
+   */
+  clearable?: boolean;
 }
 
 /** @hidden */
-export function defaultInputProps(): Required<InferVueDefaults<InputProps>> {
+export function defaultInputProps() {
   return {
-    ...defaultButtonProps(),
     modelValue: '',
-  };
+    placeholder: '',
+    disabled: false,
+    clearable: false,
+  } satisfies Required<InferVueDefaults<InputProps>>;
 }
 
 /** 输入框组件的事件 */
@@ -32,6 +51,15 @@ export interface InputEmits {
 
   /** 输入 */
   (event: 'input', val: string): void;
+
+  /** 聚焦 */
+  (event: 'focus', val: FocusEvent): void;
+
+  /** 失去焦点 */
+  (event: 'blur', val: FocusEvent): void;
+
+  /** 清除 */
+  (event: 'clear', val: string): void;
 }
 
 /** 输入框对外暴露的方法 */
@@ -39,8 +67,12 @@ export interface InputExpose {
   /** 清空输入框 */
   clear: () => void;
 
-  /** 响应式变量 */
-  a: Ref<number>;
-}
+  /** 获取输入框焦点 */
+  focus: () => void;
 
-export type InputInstance = InstanceType<typeof Input>;
+  /** 失去输入框焦点 */
+  blur: () => void;
+
+  /** 原生输入框元素 */
+  inputRef: Ref<HTMLInputElement | null>;
+}

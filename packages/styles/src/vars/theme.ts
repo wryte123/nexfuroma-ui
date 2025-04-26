@@ -1,6 +1,6 @@
 /** 基础颜色主题变量 */
 export const themeColors = {
-  'color-primary': '#c7000b',
+  'color-primary': '#1680B1',
   'color-success': '#50d4ab',
   'color-warning': '#fbb175',
   'color-danger': '#f66f6a',
@@ -52,10 +52,20 @@ export const themeSpacing = {
   'spacing-xl': '32px',
 };
 
+/** 基础边框主题变量 */
+export const themeBorders = {
+  'border-radius-xs': '2px',
+  'border-radius-sm': '4px',
+  'border-radius-md': '6px',
+  'border-radius-lg': '8px',
+  'border-radius-xl': '12px',
+};
+
 /** 基础主题变量 */
 export const themeVars = {
   ...themeColors,
   ...themeSpacing,
+  ...themeBorders,
 };
 
 export type ThemeCssVarsConfig = Partial<typeof themeVars>;
