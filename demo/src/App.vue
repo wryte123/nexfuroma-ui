@@ -41,12 +41,12 @@ function switchSecondLineTheme() {
 
 const inputValue = ref('');
 
-// function keydownHandle(event: KeyboardEvent) {
-//   if (event.key === 'Enter') {
-//     const { value } = inputValue;
-//     hello(value);
-//   }
-// }
+function keydownHandle(event: KeyboardEvent) {
+  if (event.key === 'Enter') {
+    const { value } = inputValue;
+    hello(value);
+  }
+}
 </script>
 
 <template>
@@ -127,6 +127,7 @@ const inputValue = ref('');
       v-model="inputValue"
       placeholder="请输入内容"
       clearable
+      @keydown="keydownHandle"
     />
     <Input
       placeholder="禁止输入内容"

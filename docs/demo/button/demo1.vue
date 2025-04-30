@@ -3,7 +3,6 @@
 import { ref, reactive } from 'vue';
 import {
   Button,
-  Input,
   ConfigProvider,
   useTheme,
   tinyThemeVars,
@@ -108,16 +107,15 @@ function switchSecondLineTheme() {
         切换第二行主题，当前：{{ currentSecondLineTheme }}
       </Button>
     </div>
-    <Input />
   </div>
 </template>
 
 <style scoped>
-.deep(.nx-button:not(:first-child)){
+.deep(.nx-button:not(:first-child)) {
   margin-left: 10px;
 }
 
-:deep(.nx-button){
+:deep(.nx-button) {
   margin-bottom: 10px;
 }
 </style>

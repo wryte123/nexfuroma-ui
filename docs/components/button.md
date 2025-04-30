@@ -16,4 +16,4 @@
 ## Button API
 
 ## [Button Props](../api/interfaces/Button.ButtonProps.md)
-## [Button Slots](../api/modules/Button.ButtonSlots.md)
+## [Button Slots](../api/interfaces/Button.ButtonSlots.md)
