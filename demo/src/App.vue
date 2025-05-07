@@ -9,6 +9,8 @@ import {
   themeVars,
   NexfuromauiCssVarsConfig,
   hello,
+  Collapse,
+  CollapseItem,
 } from '@nexfuromaui/ui';
 
 const { setTheme } = useTheme();
@@ -47,6 +49,8 @@ function keydownHandle(event: KeyboardEvent) {
     hello(value);
   }
 }
+
+const activeNames = ref(['1']);
 </script>
 
 <template>
@@ -134,6 +138,17 @@ function keydownHandle(event: KeyboardEvent) {
       disabled
     />
   </div>
+  <Collapse v-model="activeNames" accordion>
+    <CollapseItem title="标题1" name="1">
+      内容1
+    </CollapseItem>
+    <CollapseItem title="标题2" name="2">
+      内容2
+    </CollapseItem>
+    <CollapseItem title="标题3" name="3" disabled>
+      内容3
+    </CollapseItem>
+  </Collapse>
 </template>
 
 <style scoped lang="scss">

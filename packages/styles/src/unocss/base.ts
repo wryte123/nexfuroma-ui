@@ -1,6 +1,8 @@
 import { UserConfig } from 'unocss';
 import { Theme } from 'unocss/preset-mini';
-import { themeColors, themeColorLevelsEnabledKeys, themeSpacing } from '../vars';
+import {
+  themeColors, themeColorLevelsEnabledKeys, themeSpacing, themeBorders,
+} from '../vars';
 import { toTheme } from '../utils';
 
 export const baseConfig: UserConfig<Theme> = {
@@ -15,6 +17,10 @@ export const baseConfig: UserConfig<Theme> = {
     // 边距相关主题
     spacing: toTheme(themeSpacing, {
       type: 'spacing',
+    }),
+    //
+    borderRadius: toTheme(themeBorders, {
+      type: 'border-radius',
     }),
   },
 };

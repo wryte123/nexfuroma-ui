@@ -14,7 +14,7 @@
     align-items: center;
     background-color: var(--nx-input-bg-color);
     border: 1px solid var(--nx-input-border-color);
-    border-radius: var(--nx-input-border-radius);
+    border-radius: 2px; 
     transition: all 0.2s;
     
     &:hover:not(.is-disabled) {

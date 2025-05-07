@@ -1,6 +1,6 @@
 {
-  "name": "@nexfuromaui/ui",
-  "version": "0.0.4",
+  "name": "@nexfuromaui/collapse",
+  "version": "0.0.1",
   "type": "module",
   "description": "",
   "keywords": [
@@ -23,23 +23,20 @@
     "access": "public"
   },
   "scripts": {
-    "build:package": "vite build --mode package",
-    "build:full": "vite build --mode full",
-    "build:full-min": "vite build --mode full-min",
-    "build": "pnpm run build:package && pnpm run build:full && pnpm run build:full-min",
+    "build": "vite build",
     "test": "echo test"
   },
-  "main": "./dist/nexfuromaui-ui.umd.js",
-  "module": "./dist/nexfuromaui-ui.mjs",
+  "main": "./dist/nexfuromaui-collapse.umd.js",
+  "module": "./dist/nexfuromaui-collapse.mjs",
   "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/nexfuromaui-ui.umd.js",
-      "import": "./dist/nexfuromaui-ui.mjs",
+      "require": "./dist/nexfuromaui-collapse.umd.js",
+      "import": "./dist/nexfuromaui-collapse.mjs",
       "types": "./dist/src/index.d.ts"
     },
     "./*": "./*",
-    "./styles/*": "./dist/styles/*"
+    "./style.css": "./dist/style.css"
   },
   "files": [
     "dist",
@@ -49,11 +46,6 @@
     "vue": ">=3.0.0"
   },
   "dependencies": {
-    "@nexfuromaui/shared": "workspace:^",
-    "@nexfuromaui/button": "workspace:^",
-    "@nexfuromaui/input": "workspace:^",
-    "@nexfuromaui/collapse": "workspace:^",
-    "@nexfuromaui/styles": "workspace:^",
-    "@nexfuromaui/config-provider": "workspace:^"
+    "@nexfuromaui/shared": "workspace:^"
   }
 }

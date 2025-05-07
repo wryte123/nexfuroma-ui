@@ -14,7 +14,6 @@ export const inputVars = {
   'input-placeholder-color': cssVarToRgba<ThemeCssVarsConfig>('color-placeholder'),
   'input-padding-x': getCssVar<ThemeCssVarsConfig>('spacing-md'),
   'input-padding-y': getCssVar<ThemeCssVarsConfig>('spacing-xs'),
-  'input-border-radius': getCssVar<ThemeCssVarsConfig>('border-radius-xs'),
 };
 
 /** 输入组件主题变量类型 */
