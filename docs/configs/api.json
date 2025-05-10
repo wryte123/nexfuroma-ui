@@ -58,5 +58,41 @@
         ]
       }
     ]
+  },
+  {
+    "text": "折叠面板",
+    "items": [
+      {
+        "text": "Collapse 折叠面板",
+        "link": "/api/modules/Collapse",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "CollapseContext",
+            "link": "/api/interfaces/Collapse.CollapseContext"
+          },
+          {
+            "text": "CollapseEmits",
+            "link": "/api/interfaces/Collapse.CollapseEmits"
+          },
+          {
+            "text": "CollapseItemProps",
+            "link": "/api/interfaces/Collapse.CollapseItemProps"
+          },
+          {
+            "text": "CollapseItemSlots",
+            "link": "/api/interfaces/Collapse.CollapseItemSlots"
+          },
+          {
+            "text": "CollapseProps",
+            "link": "/api/interfaces/Collapse.CollapseProps"
+          },
+          {
+            "text": "CollapseSlots",
+            "link": "/api/interfaces/Collapse.CollapseSlots"
+          }
+        ]
+      }
+    ]
   }
 ]

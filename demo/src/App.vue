@@ -127,28 +127,32 @@ const activeNames = ref(['1']);
       <i class="i-nx-alert text-100px c-blue inline-block" />
       <i class="i-nx-alert-marked text-60px c-red inline-block" />
     </div>
-    <Input
-      v-model="inputValue"
-      placeholder="请输入内容"
-      clearable
-      @keydown="keydownHandle"
-    />
-    <Input
-      placeholder="禁止输入内容"
-      disabled
-    />
+    <div class="btns">
+      <Input
+        v-model="inputValue"
+        placeholder="请输入内容"
+        clearable
+        @keydown="keydownHandle"
+      />
+      <Input
+        placeholder="禁止输入内容"
+        disabled
+      />
+    </div>
+    <div class="collapses">
+      <Collapse v-model="activeNames" accordion>
+        <CollapseItem title="标题1" name="1">
+          内容1
+        </CollapseItem>
+        <CollapseItem title="标题2" name="2">
+          内容2
+        </CollapseItem>
+        <CollapseItem title="标题3" name="3" disabled>
+          内容3
+        </CollapseItem>
+      </Collapse>
+    </div>
   </div>
-  <Collapse v-model="activeNames" accordion>
-    <CollapseItem title="标题1" name="1">
-      内容1
-    </CollapseItem>
-    <CollapseItem title="标题2" name="2">
-      内容2
-    </CollapseItem>
-    <CollapseItem title="标题3" name="3" disabled>
-      内容3
-    </CollapseItem>
-  </Collapse>
 </template>
 
 <style scoped lang="scss">
@@ -160,5 +164,11 @@ const activeNames = ref(['1']);
       margin-left: 10px;
     }
   }
+}
+
+.collapses{
+  padding: 10px;
+  margin-right: 700px;
+  background-color: #f9f9f9;
 }
 </style>

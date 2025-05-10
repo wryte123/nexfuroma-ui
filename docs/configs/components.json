@@ -25,5 +25,14 @@
         "link": "/components/input"
       }
     ]
+  },
+  {
+    "text": "折叠面板",
+    "items": [
+      {
+        "text": "Collapse 折叠面板",
+        "link": "/components/collapse"
+      }
+    ]
   }
 ]
